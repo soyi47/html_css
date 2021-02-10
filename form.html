@@ -1,0 +1,40 @@
+<!doctype html> <!-- NOT case sensitive-->
+<html lang="ko">
+  <head>
+      <meta charset="utf-8">
+      <title>Form 관련 요소</title>
+  </head>
+  <body>
+    <form action="/result.html" method="post">
+      <h1>Form 요소, Form 관련 요소</h1>
+      <fieldset>
+        <legend>기본 정보</legend>
+        <label for="userid">아이디: </label><input type="text" placeholder="ID" id="userid" name="id"><br>
+        <label for="userpw">비밀번호: </label><input type="password" id="userpw" name="pw"><br>
+        성별: 남<input type="radio" name="gender" checked> 여<input type="radio" name="gender"><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>부가 정보</legend>
+        취미: 영화감상<input type="checkbox" name="hobby" checked> 음악감상<input type="checkbox" name="hobby"> 독서<input type="checkbox" name="hobby"><br>
+        프로필 사진 업로드: <input type="file"><br>
+        사는 지역: <select>
+          <option>서울</option>
+          <option>경기</option>
+          <option>강원</option>
+          <option selected>제주</option>
+        </select><br>
+        자기소개: <textarea rows="8" cols="80" placeholder="자기소개는 짧게 해주세요."></textarea><br>
+      </fieldset>
+        <br>
+
+        <input type="submit" value="전송"><br>
+        <input type="reset" value="취소"><br>
+        <input type="button" value="등록"><br>
+        <input type="image" src="./login.PNG" alt="로그인" width="100" height="30"><br>
+        <button type="submit">전송</button><br>
+        <button type="reset">취소</button><br>
+
+    </form>
+  </body>
+</html>
