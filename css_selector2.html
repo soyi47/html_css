@@ -7,6 +7,19 @@
           /* div span { color: red; }
           div > span { color: red; } */
           div + span { color: red; }
+
+          li:first-child { color: red; }
+          li:last-child { color: blue; }
+
+          a:focus { background-color: yellow }
+          a:hover { font-weight: bold }
+          a:active { color: red }
+
+          p::before { content: "BEFORE" }
+          p::after { content: "AFTER" }
+          p::first-line { color: blue }
+          p::first-letter { color: red}
+
       </style>
   </head>
   <body>
@@ -15,6 +28,17 @@
           <span>CSS는 문서를 꾸며줍니다.</span>
       </div>
       <span>Javascript는 문서를 동적으로 제어할 수 있습니다.</span>
-      <p>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.</p>
+      <p>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.<br>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.<br>HTML과 CSS와 JAVASCRIPT를 이용해서 멋진 웹 사이트를 제작할 수 있습니다.<br></p>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+      </ul>
+
+      <a href="http://www.naver.com">네이버</a>
+      <a href="http://www.google.com">구글</a>
+      <a href="http://www.daum.net">다음</a>
+
   </body>
 </html>
