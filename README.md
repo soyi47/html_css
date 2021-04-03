@@ -1,2 +1,3 @@
-# Boostcourse-BasicHTMLnCSS
+# 🚀 HTML&CSS Study
+ 
  Boostcourse-BasicHTMLnCSS
