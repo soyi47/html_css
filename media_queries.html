@@ -68,6 +68,17 @@
         - 앵커 요소의 url 출력
         - 앵커 요소의 밑줄 제거
         */
+
+        @media print {
+            a {
+                text-decoration: none;
+            }
+
+            a:after {
+                display: inline;
+                content: "("attr(href)")";
+            }
+        }
     </style>
 </head>
 
