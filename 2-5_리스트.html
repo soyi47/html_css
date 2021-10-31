@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - List</title>
+</head>
+
+<body>
+    <!--
+        리스트 List : 일련된 항목이 나열된 것들
+
+        <ul> : unordered list. 나열된 항목에 순서가 없는 리스트
+        <ol> : ordered list. 나열된 항목에 순서가 있는 리스트
+        <li> : list item
+
+        <dl> : definition/description list. 용어를 설명하는 리스트
+        <dt> : definition term. 용어를 구분
+        <dd> : definition description. 용어의 정의. 
+            하나의 용어에 여러 개 정의 작성 가능 (하나의 <dt> 태그 아래 <dd>를 하나 이상 쓰는 것 가능)
+
+        ul ref :: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+        ol ref :: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol (다양한 번호 매김 옵션)
+        dl ref :: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+    -->
+
+    <ul>
+        <li>콩나물</li>
+        <li>파</li>
+        <li>국 간장</li>
+    </ul>
+
+    <ol>
+        <li>냄비에 국물용 멸치를 넣고 한소끔 끓여 멸치 육수를 7컵(1,400ml) 만든다.</li>
+        <li>콩나물을 넣고 뚜껑을 덮어 콩나물이 익을 때까지 끓인다.</li>
+        <li>뚜껑을 열고 대파, 마늘, 고춧가루를 넣고 끓인다.</li>
+    </ol>
+
+    <dl>
+        <dt>리플리 증후군</dt>
+        <dd>허구의 세계를 진실이라 믿고 거짓된 말과 행동을 상습적으로 반복하는 반 사회적 성격장애를 뜻하는 용어</dd>
+        <dd>리플리 증후군에 대한 또다른 정의</dd>
+        <dt>피그말리온 효과</dt>
+        <dd>타인의 기대나 관심으로 인하여 능률이 오르거나 좋아지는 현상</dd>
+        <dt>언더독 효과</dt>
+        <dd>사람들이 약자라고 믿는 주체를 응원하게 되는 현상</dd>
+    </dl>
+
+    <!-- 
+        리스트의 중첩 
+        - <ol>, <ul>의 자식으로는 <li>만 올 수 있다.
+            반대로, <li> 태그는 <ol>이나 <ul> 태그만을 부모로 가질 수 있다.
+        - <li> 태그의 자식으로는 다른 요소들이 들어올 수 있다. -> 리스트 중첩 가능
+    -->
+    <h1>월드컵 조 편성</h1>
+    <ol>
+        <li>
+            A조
+            <ul>
+                <li>러시아</li>
+                <li>우루과이</li>
+                <li>이집트</li>
+                <li>사우디아라비아</li>
+            </ul>
+
+        </li>
+        <li>
+            B조
+            <ul>
+                <li>이란</li>
+                <li>스페인</li>
+                <li>포르투갈</li>
+                <li>모로코</li>
+            </ul>
+
+        </li>
+        <li>
+            C조
+            <ul>
+                <li>프랑스</li>
+                <li>덴마크</li>
+                <li>호주</li>
+                <li>페루</li>
+            </ul>
+        </li>
+        <li>
+            D조
+            <ul>
+                <li>크로아티아</li>
+                <li>아르헨티나</li>
+                <li>아이슬란드</li>
+                <li>나이지리아</li>
+            </ul>
+        </li>
+    </ol>
+
+</body>
+
+</html>

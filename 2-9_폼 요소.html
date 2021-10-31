@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - 폼 요소</title>
+    <!--
+        폼 요소 Form : 서버에 데이터를 전달하기 위한 요소들
+        ref :: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#forms
+    
+        <form> 
+            - 폼 요소들의 데이터를 묶어 실제 서버로 전송하는 역할
+            - 폼 요소를 가장 크게 감싼다.
+            - action 속성 : 폼 데이터를 처리하기 위한 서버의 주소가 들어감
+            - method 속성 : 데이터를 전송하는 방식(get, post)을 지정
+                get 방식은 데이터 전송 시 주소창에 파라미터 형태로 데이터가 노출됨. 반면 port 방식은 데이터가 노출되지 않으므로, 회원가입, 로그인 정보와 같이 민감한 정보는 post를 사용.
+    -->
+</head>
+
+<body>
+    <!--
+        <<< 폼 요소 >>>
+
+        <input> 
+            - 대표적 폼 요소. 빈 태그.
+            - type 속성을 통해 여러 종류의 입력 양식으로 나타남
+            - placeholder 속성은 사용자 입력 전 화면에 노출하는 값으로 입력 값의 양식을 표현할 수 있음
+
+        <input>의 type 속성값
+            - text : 단순한 텍스트 입력에 사용
+            - password : 공개할 수 없는 내용 입력에 사용
+            - radio : 라디오 버튼 만들 때 사용
+                    name 속성으로 그룹을 만들고, 그룹 내에서는 중복 선택 불가능
+            - checkbox : 체크박스 만들 때 사용
+                    name 속성으로 그룹을 만들고, 그룹 내 중복 선택 가능
+                * radio와 checkbox에는 checked 속성(boolean)도 있음. 속성값이 true인 경우 해당 요소가 check 된 형태로 나타남
+
+            - file : 파일을 서버에 올릴 때 사용
+            - submit : form의 값을 전송하는 버튼
+            - reset : form의 값을 초기화하는 버튼
+            - button : 기능 없는 버튼. 커스텀하여 필요에 따라 사용
+                * submit, reset, button의 경우 value 속성을 지정하여 웹 페이지에 나타나는 버튼 이름 변경 가능
+            - image : 이미지를 삽입할 수 있는 버튼(submit과 동작 동일)
+        
+        <select>
+            - 선택 목록상자. 콤보박스
+            - 내부에 <option> 태그로 각 항목을 나타냄.
+                <option>에 selected 속성을 주면 선택된 항목을 의미함.
+
+        <textarea> 
+            - 여러 줄 텍스트 입력 상자. 빈 태그 아님. (input의 type:text는 한 줄)
+            - placeholder 속성 사용 가능
+            - cols, rows 속성을 통해 텍스트 상자의 크기를 조절함.
+                cols : 가로 크기 조절. 한 줄에 들어가는 글자 수를 의미하나, 평균적인 글자의 너비로 계산하여 정확한 글자 수를 나타내지는 않음
+                rows : 세로 크기 조절. 화면에 보여지는 줄 수.
+
+        <button>
+            - 사용자가 클릭 가능한 버튼
+            - type 속성에 submit|reset|button을 줄 수 있고, <input>의 submit, reset, button과 같은 기능을 함.
+            - <input>과 차이점 ? 
+                빈 태그가 아니라 태그 안에 내용을 직접 넣을 수 있어 스타일면에서 더 자유로움.
+    -->
+
+    <!--
+        <<< 폼 관련 요소 >>>
+
+        <label>
+            - 폼 요소의 이름과 폼 요소를 명시적으로 연결하기 위해 사용
+            - 폼 컨트롤과 연결하기 위해 사용하며, 웹 접근성 향상에 도움이 되므로 필수 사용!
+            - 모든 폼 요소에 사용 가능하며, 폼 요소 하나 당 label 하나 매칭
+            - label을 클릭하면 연결된 폼 요소를 클릭한 것처럼 동작함
+
+        <fieldset> : 여러 개의 폼 요소를 그룹화하여 구조화
+        <legend> : 폼 요소의 제목. <fieldset> 요소 내부에 가장 먼저 선언
+    -->
+
+    <form action="/test.html">
+        <h1>Form 관련 요소</h1>
+
+        <fieldset>
+            <legend>
+                기본 정보
+            </legend>
+            <label for="userid">아이디 : </label><input type="text" placeholder="영문으로 작성" id="userid"><br>
+            <label for="userpw">비밀번호 : </label><input type="password" id="userpw"><br>
+            성별 :
+            <label for="male">남자 </label><input type="radio" name="gender" id="male" checked>,
+            <label for="female">여자 </label><input type="radio" name="gender" id="female"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                부가 정보
+            </legend>
+            취미 :
+            <label for="movie">영화 감상 </label><input type="checkbox" name="hobby" id="movie" checked>,
+            <label for="music">음악 감상 </label><input type="checkbox" name="hobby" id="music">,
+            <label for="book">독서 </label><input type="checkbox" name="hobby" id="book"><br>
+
+            <label for="photo">프로필 사진 업로드 : </label><input type="file" id="photo"><br>
+
+            <label for="area">사는 지역 : </label>
+            <select id="area">
+                <option>서울</option>
+                <option>경기</option>
+                <option>강원</option>
+                <option selected>제주</option>
+            </select><br>
+
+            <label for="introduce">자기소개 : </label><textarea cols="30" rows="5" id="introduce"></textarea><br>
+        </fieldset>
+
+        <button type="submit">전송</button><br>
+        <button type="reset">취소</button><br>
+
+        <input type="submit" value="전송"><br>
+        <input type="reset" value="취소"><br>
+        <input type="button" value="등록"><br>
+        <input type="image" src="./images/login.PNG" alt="로그인" width="100" height="30">
+    </form>
+
+    <h1>form 태그</h1>
+    <form action="/result.html" method="get">
+        아이디 : <input type="text" name="id" id="name"><br>
+        비밀번호 : <input type="password" name="password" name="pw" id="pw">
+        <input type="submit">
+    </form>
+    <form action="/result.html" method="post">
+        아이디 : <input type="text" name="id" id="name"><br>
+        비밀번호 : <input type="password" name="password" name="pw" id="pw">
+        <input type="submit">
+    </form>
+</body>
+
+</html>

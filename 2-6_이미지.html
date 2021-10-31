@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML - image</title>
+</head>
+
+<body>
+    <!--
+        이미지 Image
+            문서에 이미지를 삽입하는 태그. 빈 태그
+            - src : 이미지 경로를 지정하는 필수 속성
+            - alt : 이미지 대체 텍스트를 입력하는 필수 속성. 
+                스크린 리더기가 읽거나, 이미지를 못 가져오는 경우에 노출되는 내용
+            - width/height : 이미지의 가로, 세로 크기 지정
+                width나 height 둘 중 하나만 선언되면, 다른 하나의 값은 원본 이미지 비율에 맞춰 줄어든다.
+    -->
+    <img src="./images/pizza.png" alt="피자" width="400">
+    <img src="./images/pizza.png" alt="피자" width="400" height="200">
+
+    <!-- 더미 이미지 생성-->
+    <img src="http://placehold.it/500x250" alt="">
+    <img src="http://placehold.it/500x250" alt="" width="250">
+
+    <!--
+        이미지의 경로
+        - 절대 경로 : 실제 소스 위치의 전체 경로
+        - 상대 경로 : 현재 웹 문서 페이지를 기준으로 소스의 상대적인 위치
+            './' : 페이지가 있는 현재 폴더
+            '../' : 현재 폴더의 상위 폴더
+
+        이미지 파일 형식
+        - gif : 256색으로 제한적. 용량이 작고 애니메이션과 투명 이미지 가능
+        - jpg : 높은 압축률, 자연스러운 색상 표현 가능. 사진이나 일반적인 그림에 사용. 투명 지원하지 않음
+        - png : jpg와 비교했을 때 이미지 손실이 없고 투명과 반투명 모두 지원
+    -->
+</body>
+
+</html>
