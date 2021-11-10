@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selector</title>
+    <style>
+        /* 
+            요소 선택자 (태그 선택자)
+            - 선택자 부분에 태그의 이름이 들어감.
+            - 문서 내에 선택자에 해당하는 요소, 태그 모두에 스타일 규칙 적용
+        */
+
+        p {
+            color: darkblue;
+        }
+
+        /* 선언의 그룹화 */
+        h1 {
+            color: yellow;
+            font-size: 2em;
+            background-color: gray;
+        }
+
+        /* 선택자의 그룹화 */
+        h2,
+        h3,
+        h4 {
+            color: green;
+        }
+
+        /* 선택자와 선언의 그룹화 */
+        h5,
+        h6 {
+            color: green;
+            font-size: 1em;
+            background-color: lightgray;
+        }
+
+        /* 전체 선택자 '*' 별표, asterisk 
+            - 문서 내 모든 요소 선택
+            - 성능에 좋지 않으므로 사용 지양
+        * { color: black; }
+        */
+    </style>
+</head>
+
+<body>
+    <h1>Hello, CSS</h1>
+    <h2>This is h2</h2>
+    <h3>This is h3</h3>
+    <h4>This is h4</h4>
+    <h5>This is h5</h5>
+    <h6>This is h6</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, error? Magni dicta itaque tempore cupiditate, omnis
+        soluta quod eligendi pariatur aliquid sed, incidunt, iste fugit obcaecati nobis. Quod, alias a?</p>
+</body>
+
+</html>
