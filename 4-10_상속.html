@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*
+            상속
+            - 부모 태그로부터 속성이 상속되는 것.
+            - 모든 속성이 다 상속되지는 않음
+            - margin, padding, background, border 등 박스 모델 속성은 상속되지 않음
+            - 상속된 속성은 아무런 구체성을 가지지 않음!
+                => 0, 0, 0, 0의 구체성에도 적용 순위가 밀리게 된다.
+        */
+        * {
+            color: red;
+        }
+
+        h1#page {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="page">Hello, <em>CSS</em></h1>
+    <!-- 
+        <em>은 <h1>으로부터 color: gray를 상속받지만,
+        상속된 속성에는 구체성 값이 없기 때문에, 
+        전체 선택자로 정의된 스타일 속성이 적용된다.
+    -->
+</body>
