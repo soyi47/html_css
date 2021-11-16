@@ -4,7 +4,7 @@
 
 ### Box Model의 구조
 
-![](..\images\boxmodel.png)
+<img src="..\images\boxmodel.png" style="zoom: 67%;" />
 
 + **Content**
 
